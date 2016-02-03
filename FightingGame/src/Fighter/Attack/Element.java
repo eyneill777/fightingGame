@@ -1,5 +1,7 @@
 package Fighter.Attack;
 
+import Voxel.Material;
+
 public class Element extends PowerModifier
 {
 	public Element(int key, String name)
@@ -7,8 +9,21 @@ public class Element extends PowerModifier
 		super(key, name);
 	}
 	
-	public void combineWith(Element e)
+	public Material combineWith(Element e)
 	{
-		
+		//todo
+		if(name.equals("Earth"))
+		{
+			
+		}
+		else if(name.equals("Fire"))
+		{
+			
+		}
+		else if(name.equals("Water"))
+		{
+			
+		}
+		return null;
 	}
 }
