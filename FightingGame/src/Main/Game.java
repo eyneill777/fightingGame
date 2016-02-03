@@ -30,6 +30,9 @@ public class Game
 		camera = new Rectangle(Main.windowDim.width,Main.windowDim.height);
 		camera.x = 0;
 		camera.y = 0;
+		DeveloperOptions devOptions = new DeveloperOptions();
+		main.addMouseListener(devOptions);
+		main.addMouseMotionListener(devOptions);
 	}
 	
 	public void draw(Graphics2D g)
@@ -52,6 +55,7 @@ public class Game
 		}
 		stage.update(camera);
 		voxelManager.update();
+		DeveloperOptions.update(this);
 	}
 	
 	public void updateCamera()
