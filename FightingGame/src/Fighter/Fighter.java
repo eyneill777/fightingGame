@@ -47,9 +47,11 @@ public class Fighter extends GameObject
 	
 	public void draw(Graphics2D g, Rectangle camera)
 	{
-		// Draw Hitboxes for wall collision debug
-				g.setColor(Color.red);
-				g.fillRect(hitBox.x-camera.x, hitBox.y-camera.y, hitBox.width, hitBox.height); 
+		if(Main.DeveloperOptions.drawFighterHitboxes)
+		{
+			g.setColor(Color.red);
+			g.fillRect(hitBox.x-camera.x, hitBox.y-camera.y, hitBox.width, hitBox.height); 
+		}
 		
 		chest.draw(g, camera);
 	}
@@ -106,7 +108,6 @@ public class Fighter extends GameObject
 			setStance(currentAnimation.frames.get(animationCount));
 			animationCount++;
 			animationCounter = System.currentTimeMillis();
-			System.out.println(animationCount+currentAnimation.name);
 		}
 	}
 	

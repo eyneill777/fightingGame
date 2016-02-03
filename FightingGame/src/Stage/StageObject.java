@@ -30,7 +30,7 @@ public class StageObject
 			g.setColor(Color.GRAY);
 			g.fillRect(screenX, screenY, shape.width, shape.height);
 		}
-		if(checked)
+		if(checked && Main.DeveloperOptions.drawCollisionMap)
 		{
 			g.setColor(new Color(0,0,255,70));
 			g.fillRect(screenX, screenY, shape.width, shape.height);
